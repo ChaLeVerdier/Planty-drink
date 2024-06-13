@@ -1,0 +1,6 @@
+
+
+# Fichier gitignore ignore certains fichiers et dossiers lors du contrôle de version.
+
+# Ignorer les sauvegardes
+/ai1wm-backups
