@@ -1,0 +1,470 @@
+/*
+ Theme Name:   Planty
+ Theme URI:    https://openclassrooms.com/
+ Description:  Thème enfant pour Astra
+ Author:       OC avec Astra
+ Author URI:   contact@art-graphic-leverdier.com
+ Template:     astra
+ Version:      4.6.13
+ Text Domain:  planty
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
+
+* {
+    font-family: 'Syne', sans-serif;
+}
+
+/* Variables */
+
+:root {
+    --main-color: #ECE2DA;
+    --secondary-color: #E0B9B4;
+    --tertiary-color: #E3D9D0;
+    --accent-color: #3B8E46;
+    --color-btn: #DC9F96;
+    --color-btn-hover: #C02E44;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+}
+
+/* HEADER */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-white);
+}
+
+.logo a {
+    display: block;
+}
+
+/* MENU HAMBURGER */
+.hamburger-menu {
+    display: none;
+}
+
+/* BASCULE DES MENUS */
+#menu-toggle {
+    display: none;
+}
+
+/* Style du menu hamburger*/
+.menu-icon {
+    /* Traits du menu hamburger */
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    /* taille des traits */
+    margin-right: 5px;
+    position: relative;
+}
+
+.menu-icon span {
+    background-color: var(--color-black);
+    display: block;
+    height: 3px;
+    width: 100%;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+    /* style de transition */
+    position: relative;
+}
+
+.menu-icon span:last-child {
+    margin-bottom: 0;
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+/* MENU DESKTOP */
+/* Style pour la navigation desktop*/
+.desktop-menu .nav-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ajout du style pour les liens du menu desktop */
+.desktop-menu .nav-list li a {
+    color: var(--color-black);
+    /* Couleur noire pour les liens du menu desktop */
+    text-decoration: none;
+    /* Retrait de la décoration par défaut des liens */
+}
+
+.desktop-menu .nav-list li a:hover {
+    text-decoration: underline;
+    /* Style au survole */
+}
+
+.desktop-menu .nav-list li {
+    margin-right: 60px;
+}
+
+/* style du bouton "Commander" */
+.desktop-menu .nav-list li:last-child {
+    margin-right: 0;
+    display: flex;
+    width: 236px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-btn);
+}
+
+.desktop-menu .nav-list li:last-child a {
+    color: var(--color-white);
+    /* style du lien pour "Commander" */
+}
+
+.desktop-menu .nav-list li:last-child a:hover {
+    text-decoration: underline;
+    /* style du lien au survol pour "Commander" */
+}
+
+/* MENU MOBILE */
+.mobile-nav-container {
+    display: none;
+    position: fixed;
+    /* Pour que le menu occupe tout l'écran */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--main-color);
+    /* Utilisation de la même couleur que celle du header pour le menu mobile */
+    z-index: 1000;
+    /* Assurer que c'est au-dessus de tout le reste */
+    justify-content: center;
+    /* Centrer verticalement */
+    align-items: center;
+    /* Centrer horizontalement */
+}
+
+.mobile-menu .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    /* Centrer le texte du menu */
+}
+
+.mobile-menu .nav-list li {
+    margin: 10px 0;
+}
+
+.mobile-menu .nav-list li a {
+    color: var(--color-black);
+    font-size: 20px;
+    /* Ajustez cette valeur selon vos préférences */
+    text-decoration: none;
+    /* Retirer la décoration par défaut des liens */
+}
+
+#menu-toggle:checked~.mobile-nav-container {
+    display: flex;
+}
+
+.close-menu-icon {
+    position: absolute;
+    top: 100px;
+    /* Ajustez cette valeur selon vos besoins */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    color: var(--color-black);
+    cursor: pointer;
+}
+
+/** HOME **/
+
+/* Style du hero */
+.hero {
+    height: 618px;
+    width: 640px;
+}
+
+.canette {
+    z-index: 2;
+    position: absolute;
+}
+
+.leaf-left {
+    left: 180px;
+    bottom: 77px;
+}
+
+.leaf-right {
+    right: 190px;
+    bottom: 77px;
+}
+
+.bouton-gouts a:hover {
+    background-color: var(--color-btn-hover) !important;
+}
+
+.nous-rencontrer {
+    z-index: 1;
+    background-image: url("http://planty.local/wp-content/uploads/2024/05/icon-flower.png");
+    background-size: 145px 150px;
+    background-position: 45px 55px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    /* Prévention du débordement visuel */
+}
+
+/* Section équipe */
+.section-equipe {
+    z-index: 1;
+    background-image: url("http://planty.local/wp-content/uploads/2024/05/icon-branch-left.png");
+    background-size: 191px 219px;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
+/* Formulaire et pied de page */
+.wpcf7-form-control {
+    /* élément parent */
+    z-index: 1;
+    padding: 0;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span[data-name="message"]::before {
+    /* élement enfant, avant "span message" */
+    content: url(http://planty.local/wp-content/uploads/2024/05/icon-leaf.png);
+    width: 100px;
+    height: 80px;
+    z-index: -1;
+    position: absolute;
+    left: -85px;
+    bottom: 40px;
+}
+
+span[data-name="message"] {
+    /* element enfant "span message" */
+    position: relative;
+    z-index: 2;
+    padding: 0 !important;
+}
+
+.submit:hover {
+    background-color: var(--color-btn-hover) !important;
+}
+
+/** PAGE COMMANDER **/
+.fruits-nb {
+    display: flex;
+    max-width: 64%;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    gap: 26px;
+}
+
+.quantity-input {
+    width: 60px !important;
+    height: 56px !important;
+    display: flex;
+    margin: auto;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 9px;
+    border-radius: 0;
+    appearance: textfield;
+}
+
+.separator-horizontal {
+    display: flex;
+    width: 64%;
+    margin: auto;
+    height: 2px;
+    background-color: white;
+}
+
+.informations-livraisons {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 20px; */
+}
+
+.section {
+    flex: 1;
+    margin: 0 5px;
+    /* Espacement horizontal entre les sections */
+}
+
+.contact-form__group {
+    /* style conteneur infos-livraison*/
+    border: none !important;
+    flex: 1;
+    width: 80%;
+    margin: auto;
+}
+
+.contact-form__legend {
+    /* Vos infos+livraison : Style text */
+    margin-bottom: 1rem;
+    color: white;
+    border: none !important;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0;
+}
+
+.contact-form__field {
+    /* Vos infos+livraison : Hauteur entre les champs */
+    margin-bottom: 1rem;
+    flex-direction: column;
+}
+
+.contact-form__label {
+    /* Vos infos+livraison : Hauteur entre les champs et label */
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.contact-form__input {
+    /* Vos infos+livraison : Style des champs */
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.separator {
+    width: 2px;
+    background-color: white;
+    margin: 0 10px;
+    /* Espacement autour du séparateur */
+}
+
+.info-livraison-button {
+    margin-top: 40px !important;
+    border: 1px solid #dc9f96 !important;
+    border-radius: 7px !important;
+}
+
+.info-livraison-button:hover {
+    background-color: #C02E44 !important;
+    border: none !important;
+}
+
+/** FOOTER **/
+.site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.footer-menu .nav-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-menu .nav-list a {
+    color: var(--color-black);
+}
+
+.footer-menu .nav-list a:hover {
+    text-decoration: underline;
+}
+
+/* @ MOBILE STYLE */
+@media all and (max-width: 850px) {
+    .desktop-menu {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        position: relative;
+    }
+}
+       
+@media all and (max-width: 768px) {
+
+    /* Header */
+    .site-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nous-rencontrer {
+        background-image: none;
+    }
+
+    /* Commander page */
+    .fruits-nb {
+        flex-direction: column;
+        max-width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .informations-livraisons {
+        margin-top: 50px;
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+    }
+
+    .contact-form__group {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contact-form__legend {
+        font-weight: 400;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+
+    .contact-form__field {
+        margin-bottom: 1.5rem;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .info-livraison-button {
+        font-size: 13px !important;
+    }
+}
+
+@media all and (max-width: 320px) {
+    /* ajustement globaux pour tout petits écrans */ 
+    .site-header, 
+    .hero,
+    .section-equipe,
+    .nous-rencontrer,
+    .fruits-nb,
+    .informations-livraisons,
+    .contact-form__group {
+        padding: 10px;
+        text-align: center;
+    }
+    .contact-form__legend {
+        margin: 30px 0 !important;
+    }
+    .info-livraison-button {
+        font-size: 13px !important;
+    }
+}

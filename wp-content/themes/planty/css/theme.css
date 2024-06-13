@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap');
+
+
+/* *, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */      /* pas necessaire sur un theme enfant */
+
+* {
+  font-family: 'Syne', sans-serif;
+}
+
+/* Variables */
+
+:root {
+  --main-color: #ECE2DA;
+  --secondary-color: #E0B9B4;
+  --tertiary-color: #E3D9D0;
+  --accent-color: #3B8E46;
+
+  --color-btn: #DC9F96;
+  --color-btn-hover: #C02E44;
+
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+}
+
+/***************** HEADER *****************/
+/*header */
+#site-header.sticky-top {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  background-color: white;
+}
+.site-header {
+  width: 100%;
+  /* Largeur de 100% pour s'adapter à la largeur de l'écran */
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+
+/* Logo */
+.custom-logo{
+  margin-left: 36px;
+}
+
+/*Navigation*/
+.nav-list {
+  list-style-type: none;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-item-29 .menu-link {
+  color: black;
+  padding: 20px 60px;
+  height: 100%;
+}
+/* Navigation Links */
+.menu-item-34 .menu-link {
+  color: rgb(255, 255, 255);
+  width: 14.75em;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dc9f96;
+  text-align: center;
+}
+
+/* Navigation Links Hover : pas précisé */
+/* Navigation Links Active : pas précisé */
+
+/***************** HERO *****************/
+
+/* Hero title : avec gutenberg */
+
+/* Hero Image */
+.hero { /* conteneur de la canette */ 
+  height: 618px ;
+  width: 640px;
+  position: relative;
+}
+.canette { 
+  z-index: 2;
+  position: absolute;
+}
+.leaf-left { 
+  z-index: 1;
+  position: absolute;
+  left: 348px;
+  bottom: 77px; 
+}
+.leaf-right { 
+  z-index: 1;
+  position: absolute;
+  right: 372px;
+  bottom:77px; 
+}
+
+/***************** PAGE HOME *****************/
+.shape-divider-container{
+  margin: 0;
+  border-radius: 0,0, 150px, 150px;
+}
+.shape-divider1{
+  z-index: 1;
+  position: absolute;
+  width: 100%; 
+  min-height: 70px; 
+  border: 0;
+  margin: 0;
+}
+.shape-divider2 {
+  z-index: 2;
+  position: absolute;
+  transform: translateY(-5px);
+  border: 0;
+}
+.bloc-comment{
+  align-items: center;
+  justify-content: space-between ;
+}
+.footer-cans{
+  padding-top: 70px;
+  margin: 0px;
+  background-color: #FFFFFF;
+}
+.entry-content[ast-blocks-layout]>figure{ /*class trouvée sur l'inspecteur (pour enlever la marge en bas des canettes) */
+  margin-bottom: 0;
+}
+/***************** PAGE NOUS-RENCONTRER *****************/
+
+.fleurs-top{
+    position: relative;
+    right: 200px;
+    top: 70px;
+}
+.section-equipe{
+  max-height: 554px;
+}
+.equipe-feuille{
+    z-index: -1;
+    position: relative;
+    right: -170px;
+    bottom: 250px;
+}
+.form-feuille{
+  z-index: 1;
+  position: relative;
+  left: 380px;
+  bottom: 300px;
+}
+/* Formulaire  */
+.wpcf7-form-control {
+  /* z-index: 2; */
+  padding: 0;
+ }
+.wpcf7 js icf7s-225{
+  padding: 0 ;
+  margin: 0 ;
+}
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  }
+
+/* .form-feuille ::before ::after { RETIRE PARCEQUE PLUS NECESSAIRE
+    z-index: 5;
+    position: relative;
+    left: 380px;
+    bottom: 300px;
+} */
+
+
+/**************** PAGE COMMANDER *****************/
+.contact-form-7{
+  align-content: center;
+}
+.informations-livraisons {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* Espace entre les groupes */
+}
+.contact-form__group {
+  flex: 1;
+  min-width: 300px;
+  /* Largeur minimale pour chaque groupe */
+  border: 1px solid #ccc;
+  /* Optionnel: bordure pour délimiter chaque fieldset */
+  padding: 1rem;
+  /* Optionnel: padding interne pour chaque fieldset */
+  border-radius: 4px;
+  /* Optionnel: coins arrondis pour chaque fieldset */
+}
+.contact-form__legend {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: white;
+  border: none !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  /* Espace entre la légende et les champs */
+}
+.contact-form__field {
+  margin-bottom: 1rem;
+  flex-direction: column;
+}
+.contact-form__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.contact-form__input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.saveur-button{
+  border: 1px solid #dc9f96 !important;
+  border-radius: 7px !important;
+}
+.info-livraison-button{
+  border:  1px solid #dc9f96 !important;
+  border-radius: 7px !important;
+
+} 
+
+/**************** FOOTER ******************/
+
+#site-footer.sticky-bottom {
+  position: sticky;
+  bottom: 0;
+}
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 60px;
+  }
+.menu-item-37 .menu-link {
+    color: black;
+}
+
+
+/* RESPONSIVE */
+
+.mobile-menu {
+  display: none;
+  /* Masquer par défaut */
+}
+
+/* Menu Mobile */
+@media all and (max-width: 1200px) {
+  .desktop-menu {
+    display: none;
+    /* Masquer pour les écrans mobiles */
+  }
+  .mobile-menu {
+    display: block;
+    /* Afficher pour les écrans mobiles */
+  }
+  .container {
+      width: 970px;
+  }
+}
+
+@media all and (min-width: 768px) {
+    .desktop-menu {
+    display: block;
+    /* Afficher pour les écrans de bureau à partir de 769px */
+    }
+    .container {
+      width: 750px;
+    }
+}
+
+/* TESTS RESPONSIVE */ 
+@media all and (max-width: 768px) {
+
+  /* NAVIGATION */
+  .desktop-menu {
+    display: none;
+    /* Masquer pour les écrans mobiles */
+  }
+
+  .mobile-menu {
+    display: none;
+    /* Afficher pour les écrans mobiles */
+  }
+
+  .site-header {
+    display: flex;
+    width: 768px;
+  }
+
+  /* Logo */
+  .custom-logo {
+    width: 50%;
+    margin-left: 10px;
+  }
+
+  .site-content {
+    max-width: 768px;
+  }
+
+  /* PAGE COMMANDER */
+  .fruits-nb {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 192px;
+  }
+
+  .separator-horizontal {
+    display: flex;
+    width: 100%;
+    height: 2px;
+    margin: 30px 0;
+    background-color: white;
+  }
+
+  .informations-livraisons {
+    max-width: 45%;
+  }
+
+  .contact-form__legend {
+    /* Vos infos+livraison : Style text */
+    font-size: 1rem;
+  }
+
+  .separator-vertical {
+    display: none;
+  }
+
+  .info-livraison-button {
+    font-weight: bold !important;
+    font-size: 10px !important;
+    padding: 10px !important;
+  }
+
+  /* FOOTER */
+  .menu-item-37 .menu-link {
+    font-size: 12px;
+    padding-top: 15px;
+    color: black;
+  }
+
+  .site-footer {
+    width: 768px;
+  }
+
+  @media (max-width: 220px) {
+
+    .site-header {
+      display: flex;
+      width: 220px;
+    }
+
+    /* Logo */
+    .custom-logo {
+      width: 25%;
+      margin-left: 10px;
+    }
+
+    .site-content {
+      max-width: 220px;
+    }
+
+    /* FOOTER */
+
+    .menu-item-37 .menu-link {
+      font-size: 10px;
+      padding-top: 10px;
+    }
+
+    .site-footer {
+      width: 220px;
+    }
+  }
